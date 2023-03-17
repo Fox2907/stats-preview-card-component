@@ -12,30 +12,44 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile375px.css" media="screen and (max-width: 375px)">
+  <link rel="stylesheet" href="style.css" media="screen and (min-width: 1440px)">
   <title>Frontend Mentor | Stats preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @media screen and (max-width: 378px) {
+      .Mobile-text, .Mobile-text-paragraph {
+        display: block;
+      }
+      .Desktop-text, .Desktop-text-paragraph {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 379px) {
+      .Mobile-text, .Mobile-text-paragraph {
+        display: none;
+      }
+      .Desktop-text, .Desktop-text-paragraph {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="stats-container">
     <div class="stats-details">
-      <h2>Get <span>insights</span> that help <br> your business grow.</h2>
-      <p>Discover the benefits of data analytics and make <br> better decisions regarding revenue, customer <br>
+      <h2 class="Desktop-text">Get <span class="word">insights</span> that help <br> your business grow.</h2>
+      <h2 class="Mobile-text">Get <span class="word">insights</span> that <br> help your business <br> grow.</h2>
+      <p class="Desktop-text-paragraph">Discover the benefits of data analytics and make <br> better decisions regarding revenue, customer <br>
       experience, and overall efficiency.</p>
+      <p class="Mobile-text-paragraph">Discover the benefits of data<br> analytics and make better decisions <br>regarding revenue, customer <br> 
+        experience, and overall efficiency.</p>
       <div class="stats-numbers">
-        <span>10k+ </span>
-        <span>314 </span>
-        <span>12m+ </span>
-      </div>
-      <div class="stats-letters">
-        <span>companies</span>
-        <span>templates</span>
-        <span>queries</span>
+        <div class="stat"><span class="numbers">10k+ </span><span class="letters">companies</span></div>
+        <div class="stat"><span class="numbers">314 </span><span class="letters">templates</span></div>
+        <div class="stat"><span class="numbers">12M+ </span><span class="letters">queries</span></div>
       </div>
     </div>
     <div class ="imagen">
@@ -46,9 +60,5 @@
     </div>
     
   </div>
-<!--   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 </body>
 </html>

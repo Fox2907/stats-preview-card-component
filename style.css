@@ -18,6 +18,7 @@ body{
 }
 .stats-container{
     width: 80%;
+    height: 60%;
     display: flex;
     border-radius: 10px;
     overflow: hidden;
@@ -37,65 +38,58 @@ body{
     width: 50%;
     background-color: var(--Soft-violet);
 }
-
 .stats-details {
     width: 50%;
     justify-content: center ;
     align-items: center;
 }
-.stats-details p{
-    padding-left: 10%;
-    padding-bottom: 12%;
-    font-family: var(--font-family-it);
-    color: var(--Slightly-transparent-white-main-paragraph);
-    font-size: var(--font-size-paragraph);
-}
-.stats-details span {
+
+.word {
     color: var(--Soft-violet);
 }
-.stats-details h2 {
+.Desktop-text {
     padding-top: 10%;
-    padding-left: 10%;
-    padding-bottom: 0;
+    padding-left: 12%;
+    text-align: justify;
     font-family: var(--font-family-ld);
     color: var(--White);
     font-weight: 700;
     font-size: 36px;
 }
-.stats-numbers {
-    display: block;
-    padding-left: 7%;
-    color: var(--Slightly-transparent-white-stat-headings);
-}
-.stats-letters {
-    display: block;
-    padding-left: 7%;
-    padding-bottom: 10%;
+.Desktop-text-paragraph{
+    padding-left: 12%;
+    padding-bottom: 6%;
+    line-height: 2;
+    font-family: var(--font-family-it);
     color: var(--Slightly-transparent-white-main-paragraph);
+    font-size: var(--font-size-paragraph);
+}
+.stats-numbers {
+    display: flex;
+    flex-direction: row;
+    padding-left: 12%;
+}
+.stat{
+    padding-right: 5%;
+}
+.letters {
+    display: block;
+    padding-top: 10%;
+    text-transform: uppercase;
+    color: var(--Slightly-transparent-white-main-paragraph);
+    font-family: var(--font-family-it);
     font-size: var(--font-size-paragraph);
     
 }
-
-.stats-numbers span{ 
-    display: inline-block;
-    padding-left: 3%;
+.numbers { 
     padding-right: 13%;
+    padding-bottom : 10%;
     color: var(--White);
     font-family: var(--font-family-ld);
     font-size: 32px;
     font-weight: 700;
 }
-.stats-letters span{
-    display: inline-block;
-    padding-left: 3%;
-    padding-right: 8%;
-    font-family: var(--font-family-it);
-    text-transform: uppercase;
-    color: var(--Slightly-transparent-white-main-paragraph);
-    font-size: 2.4 rem;
-    
-}
-.stats-numbers span:last-child{
+.numbers :last-child{
     color: var(--White);
     font-family: var(--font-family-ld);
     text-transform: uppercase;
